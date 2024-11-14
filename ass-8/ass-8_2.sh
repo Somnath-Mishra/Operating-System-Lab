@@ -25,4 +25,3 @@ else
   echo "No .c files found in the home directory."
 fi
 
-

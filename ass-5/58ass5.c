@@ -4,25 +4,29 @@ Roll No : 002211001058
 */
 
 /*
-Assignment Details - The objective of this assignment is to avoid deadlock. For this purpose define two
-					 global variables (Total_1 and Total_2) and initialize both of them to 10000000. You
-					 should also have two mutexes to protect these two global variables. You need to
-					 create three threads also (Th1, Th2 and Th3).
-					 The function of thread Th1 is to generate a random quantity (not more than 10) and
-					 subtract that quantity from Total_2 and add that quantity to the Total_1. Likewise,
-					 The function of thread Th2 is to generate a random quantity (not more than 10) and
-					 subtract that quantity from Total_1 and add that quantity to the Total_2. While
-					 manipulating the Totals, the Th1 and Th2 should lock both the mutex and then
-					 unlock it after changing the Totals.
-					 The function of the thread Th3 is to keep displaying the individual Totals and Grand
-					 Total (sum of Total_1 and Total_2). Make sure the displayed values are consistent.
-					 Note that this program should run forever.
-					 The order of locking and unlocking the Mutex is very important, because that’s what
-					 avoids a Deadlock or creates one. Once you correctly identify the order for avoiding
-					 Deadlock, you should upload the program. Also, include that information (as a
-					 comment in your source file) regarding the order for creating Deadlock.
-					 Make sure there are enough printf in your program so that it can be clearly
-					 understood that there is no Deadlock.
+Assignment Details - The objective of this assignment is to create a deadlock.
+For this purpose define two global variables (Total_1 and Total_2) and
+initialize both of them to 1000. You should also have two mutexes to protect
+these two global variables. You need to create two threads also.
+
+The function of each of the threads is to generate a random quantity (not more
+than 50) and subtract that quantity from one of the Total and add that quantity
+to the other Total. While manipulating the Totals, each Thread should lock both
+the mutex and then unlock it after changing the Totals.
+
+The order of locking and unlocking the Mutex is very important, because that’s
+what creates a Deadlock. Once you correctly identify this order, you should
+upload the program. Also, include that information (as comment in your source
+file) how to avoid this kind of Deadlock.
+
+If these two Threads, Two Totals and Two Mutex are not good enough for Deadlock;
+Then you need to create one more Thread, one more Total and and one more Mutex;
+and carry on the same experiment.
+
+Make sure there are enough printf in your program so that it can be clearly
+understood that there is a Deadlock. One way to ensure enough printf is to
+display the total of Total_1 and Total_2 all the time after every operation on
+it.
 
 Input Description  - No input
 Output Description - Print the individual total and the grand total
